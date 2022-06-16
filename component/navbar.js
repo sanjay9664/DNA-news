@@ -5,7 +5,7 @@ function navbar() {
 
 </div>
 <div id="sec_div">
-    <button id="search" onclick="searchnews()">  <i class="fa-solid fa-magnifying-glass" ></i>
+    <button id="search">  <i class="fa-solid fa-magnifying-glass" ></i>
     <input type="text" id="inputdata">
     </button>
 </div>`

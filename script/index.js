@@ -7,17 +7,22 @@ let nav = document.getElementById('first_div')
 
 nav.innerHTML = navbar()
 
-// function searchnews() {
-//     let value = document.getElementById("inputdata").value
+function searchnews() {
+    console.log("enterd")
+    let value = document.getElementById("inputdata").value
+
+
+    searchdata(value)
+}
+
+document.getElementById("inputdata").addEventListener("change", searchnews)
 
 
 
 
-//     console.log(value)
 
 
 
-// }
 
 // var datasearch = searchnews()
 
@@ -37,18 +42,21 @@ nav.innerHTML = navbar()
 // console.log(ourdata)
 
 
-let searchdata = async() => {
+let searchdata = async(value) => {
+
 
 
     try {
-        let res = await fetch(`https://newsapi.org/v2/everything?q=india&from=2022-05-15&sortBy=publishedAt&apiKey=4b78f0a156584fca8abfb5141d95a058`)
+        let res = await fetch(`https://newsapi.org/v2/everything?q=${value}&from=2022-05-16&sortBy=publishedAt&apiKey=dcef50318ad84ce2a6437c5b813bba82`)
 
         let data = await res.json()
 
         console.log(data)
 
         let getdata = data.articles;
+        console.log("getdata", data.articles);
 
+        document.getElementById("box2").innerHTML = null;
         getdata.forEach(function(el) {
 
             let div = document.createElement("div")
