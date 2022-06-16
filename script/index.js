@@ -24,22 +24,22 @@ document.getElementById("inputdata").addEventListener("change", searchnews)
 
 
 
-// var datasearch = searchnews()
 
 
-// function search(e) {
 
-//     if (e.key === "Enter") {
+function search(e) {
 
-//         let value = document.getElementById("inputdata").value
+    if (e.key === "Enter") {
 
-//         console.log(value)
+        let value = document.getElementById("inputdata").value
 
-//         searchdata();
-//     }
-// }
-// let ourdata = document.getElementById("inputdata").addEventListener("keydown", search)
-// console.log(ourdata)
+        console.log(value)
+
+        searchdata();
+    }
+}
+let ourdata = document.getElementById("inputdata").addEventListener("keydown", search)
+console.log(ourdata)
 
 
 let searchdata = async(value) => {
